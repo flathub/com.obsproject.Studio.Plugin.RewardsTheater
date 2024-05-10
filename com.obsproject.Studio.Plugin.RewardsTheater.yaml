@@ -49,8 +49,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/gottagofaster236/RewardsTheater.git
-        tag: 1.0.5
-        commit: fb994cb3a9e477d7f6570d6c9a7d9534255e8ae7
+        tag: 1.0.6
+        commit: f0e3bd3374ec6c44a5bbdc35b7261ae2e2afe071
         x-checker-data:
           type: git
           is-main-source: true
