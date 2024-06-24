@@ -17,14 +17,14 @@ modules:
   - name: boost
     buildsystem: simple
     build-commands:
-    - ./bootstrap.sh --prefix=/app/plugins/RewardsTheater --with-libraries=system,url,json
-    - ./b2 cxxflags="-fPIC" cflags="-fPIC" -j $FLATPAK_BUILDER_N_JOBS install
+      - ./bootstrap.sh --prefix=/app/plugins/RewardsTheater --with-libraries=system,url,json
+      - ./b2 cxxflags="-fPIC" cflags="-fPIC" -j $FLATPAK_BUILDER_N_JOBS install
     cleanup:
-    - "*"
+      - '*'
     sources:
-    - type: archive
-      url: https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.bz2
-      sha256: a6e1ab9b0860e6a2881dd7b21fe9f737a095e5f33a3a874afc6a345228597ee6
+      - type: archive
+        url: https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.bz2
+        sha256: a6e1ab9b0860e6a2881dd7b21fe9f737a095e5f33a3a874afc6a345228597ee6
 
   - name: fmt
     buildsystem: cmake-ninja
@@ -45,12 +45,13 @@ modules:
       - -DLINUX_PORTABLE=OFF
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
+      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
+        ${FLATPAK_ID}
     sources:
       - type: git
         url: https://github.com/gottagofaster236/RewardsTheater.git
-        tag: 1.0.6
-        commit: f0e3bd3374ec6c44a5bbdc35b7261ae2e2afe071
+        tag: 1.0.7
+        commit: 18ca235c1ba52384356cbc23e0d2ffbc1c90afcf
         x-checker-data:
           type: git
           is-main-source: true
