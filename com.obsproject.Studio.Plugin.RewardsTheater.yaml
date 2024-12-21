@@ -23,8 +23,8 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://boostorg.jfrog.io/artifactory/main/release/1.85.0/source/boost_1_85_0.tar.bz2
-        sha256: 7009fe1faa1697476bdc7027703a2badb84e849b7b0baad5086b087b971f8617
+        url: https://boostorg.jfrog.io/artifactory/main/release/1.87.0/source/boost_1_87_0.tar.bz2
+        sha256: af57be25cb4c4f4b413ed692fe378affb4352ea50fbe294a11ef548f4d527d89
 
   - name: fmt
     buildsystem: cmake-ninja
@@ -35,8 +35,8 @@ modules:
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     sources:
       - type: archive
-        url: https://github.com/fmtlib/fmt/releases/download/10.2.1/fmt-10.2.1.zip
-        sha256: 312151a2d13c8327f5c9c586ac6cf7cddc1658e8f53edae0ec56509c8fa516c9
+        url: https://github.com/fmtlib/fmt/releases/download/11.0.2/fmt-11.0.2.zip
+        sha256: 40fc58bebcf38c759e11a7bd8fdc163507d2423ef5058bba7f26280c5b9c5465
 
   - name: rewardstheater
     buildsystem: cmake-ninja
@@ -50,8 +50,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/gottagofaster236/RewardsTheater.git
-        tag: 1.1.0
-        commit: 0a04370a7bf77de6ce23db57ba871539e12927a1
+        tag: 1.1.1
+        commit: 2e6d635e3d0eb61db8b17bf2440ed536de3bceee
         x-checker-data:
           type: git
           is-main-source: true
