@@ -11,6 +11,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <releases>
+    <release version="1.1.2" date="2025-01-23">
+      <description></description>
+    </release>
     <release version="1.1.1" date="2024-12-21">
       <description>Added "Repeat video and stop after N seconds" option for GIFs. Improved VLC Video Source support. You don't have to manually uncheck "Show nothing when playback ends" anymore.</description>
     </release>
