@@ -2,10 +2,9 @@ id: com.obsproject.Studio.Plugin.RewardsTheater
 branch: stable
 runtime: com.obsproject.Studio
 runtime-version: stable
-sdk: org.kde.Sdk//6.6
+sdk: org.freedesktop.Sdk//25.08
 build-extension: true
 separate-locales: false
-appstream-compose: false
 build-options:
   prefix: /app/plugins/RewardsTheater
 cleanup:
@@ -17,26 +16,14 @@ modules:
   - name: boost
     buildsystem: simple
     build-commands:
-      - ./bootstrap.sh --prefix=/app/plugins/RewardsTheater --with-libraries=system,url,json
+      - ./bootstrap.sh --prefix=/app/plugins/RewardsTheater --with-libraries=url,json
       - ./b2 cxxflags="-fPIC" cflags="-fPIC" -j $FLATPAK_BUILDER_N_JOBS install
     cleanup:
       - '*'
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
-        sha256: af57be25cb4c4f4b413ed692fe378affb4352ea50fbe294a11ef548f4d527d89
-
-  - name: fmt
-    buildsystem: cmake-ninja
-    builddir: true
-    config-opts:
-      - -DFMT_DOC=OFF
-      - -DFMT_TEST=OFF
-      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-    sources:
-      - type: archive
-        url: https://github.com/fmtlib/fmt/releases/download/11.0.2/fmt-11.0.2.zip
-        sha256: 40fc58bebcf38c759e11a7bd8fdc163507d2423ef5058bba7f26280c5b9c5465
+        url: https://archives.boost.io/release/1.91.0/source/boost_1_91_0.tar.bz2
+        sha256: de5e6b0e4913395c6bdfa90537febd9028ea4c0735d2cdb0cd9b45d5f51264f5
 
   - name: rewardstheater
     buildsystem: cmake-ninja
@@ -45,13 +32,11 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo /run/build/rewardstheater/${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
-        ${FLATPAK_ID}
     sources:
       - type: git
         url: https://github.com/gottagofaster236/RewardsTheater.git
-        tag: 1.1.4
-        commit: 793a15e3674726ffe6fc94f64a44c8b501aaf0cb
+        tag: 1.1.5
+        commit: 05b40acefe0862dc49d59592ef1bc79c40fdd791
         x-checker-data:
           type: git
           is-main-source: true

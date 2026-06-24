@@ -11,20 +11,23 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <releases>
+    <release version="1.1.5" date="2026-06-24">
+      <description><p>VLC source &quot;Loop Playlist&quot; is no longer set to fix playback problems</p></description>
+    </release>
     <release version="1.1.4" date="2025-03-03">
-      <description>Fix reconnection to Twitch and improve logging.</description>
+      <description><p>Fix reconnection to Twitch and improve logging.</p></description>
     </release>
     <release version="1.1.3" date="2025-02-09">
-      <description>Update to new Twitch APIs. Old plugin versions will stop working in February-March 2025.</description>
+      <description><p>Update to new Twitch APIs. Old plugin versions will stop working in February-March 2025.</p></description>
     </release>
     <release version="1.1.2" date="2025-01-23">
-      <description>Automatically set "Restart playback when source becomes active" for all RewardsTheater sources</description>
+      <description><p>Automatically set &quot;Restart playback when source becomes active&quot; for all RewardsTheater sources</p></description>
     </release>
     <release version="1.1.1" date="2024-12-21">
-      <description>Added "Repeat video and stop after N seconds" option for GIFs. Improved VLC Video Source support. You don't have to manually uncheck "Show nothing when playback ends" anymore.</description>
+      <description><p>Added &quot;Repeat video and stop after N seconds&quot; option for GIFs. Improved VLC Video Source support. You don't have to manually uncheck &quot;Show nothing when playback ends&quot; anymore.</p></description>
     </release>
     <release version="1.1.0" date="2024-12-20">
-      <description>Added "Repeat video and stop after N seconds" option for GIFs. Improved VLC Video Source support. You don't have to manually uncheck "Show nothing when playback ends" anymore.</description>
+      <description><p>Added &quot;Repeat video and stop after N seconds&quot; option for GIFs. Improved VLC Video Source support. You don't have to manually uncheck &quot;Show nothing when playback ends&quot; anymore.</p></description>
     </release>
     <release version="1.0.9" date="2024-10-22">
       <description/>
@@ -33,7 +36,7 @@
       <description/>
     </release>
     <release version="1.0.7" date="2024-06-24">
-      <description>Fixed VLC source playback</description>
+      <description><p>Fixed VLC source playback</p></description>
     </release>
     <release version="1.0.6" date="2024-05-10"/>
     <release version="1.0.5" date="2023-11-06"/>
